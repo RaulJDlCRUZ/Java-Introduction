@@ -418,3 +418,177 @@ En programación es habitual que se necesiten muchos elementos del mismo tipo, e
 - Una organización definida por uno o varios **índices**. Estos índices permiten _señalar_ un elemento específico.
 - Dependiendo del **número** de índices, la estructura será **unidimensional** o **multidimensional**.
 
+Los elementos se distinguen mediante un índice:
+
+<div align="center">
+
+|Tipo de array|Elemento(s)|Distribución|
+|:---|:---:|:---|
+|Array unidimensional|$a_0, a_1,\dots, a_n$|`i=0, n`|
+|Array unidimensional|$a_{ij}$|`i=0, n`<br>`j=0, m`|
+|Array unidimensional|$a_{ijk}$|`i=0, n`<br>`j=0, m`<br>`k=0, l`|
+
+</div>
+
+Otras propiedades que tienen los _arrays_ de Java:
+
+- La enumeración de los índices comienza en **cero**. Entonces, si un array tiene `n` elementos el **rango** de los índices es _`[0, n-1]`_.
+- Son **objetos**. Los elementos almacenados pueden ser de **diferentes tipos**: `int`, `double`, etc., incluso _objetos_, sin embargo, todos ellos deben ser del **mismo** tipo.
+
+```java
+type [] array_name = new type [array_length];
+// Ejemplo de array unidimensional con capacidad para 20 enteros
+int [] results = new int [20];
+```
+>:information_source: Java inicializará el array `results` con ceros
+
+- Se permite definir una referencia **vacía**:
+
+```java
+type [] name = null;
+```
+
+- Es posible inicializar un _array_ en "varios pasos":
+
+```java
+type[] array_name;
+array_name = new tipo [array_length];
+```
+
+- Invocar a una posición o **elemento específico**:
+
+```java
+results[3] //Llamará al cuarto elemento, el primero es 0
+```
+
+- Conocer la **longitud** (tamaño del array):
+
+```java
+int longitud = lista.length;
+```
+
+> :warning: **NO** confundir con `length()`, método usado por objetos `String`
+
+- Utilizar una lista de elementos para crear e inicializar un array:
+
+```java
+tipo [] nombre_array = {lista de elementos separados por comas};
+// Ejemplo con enteros
+int [] valores = {22, 56, 1, 39, 88};
+```
+
+- Ejemplo de modelaje de una sala de un cine, considerando que se debe conocer si una butaca está ocupada o no. Por ejemplo, sabemos que las columnas van del 1 al 11 (izquierda a derecha), y las filas del 1 (más cercana) al 8 (más al fondo):
+
+```java
+boolean [][] salaCine;
+salaCine = new boolean [8][11];
+```
+
+---
+
+```java
+class MatricesA {
+    public static void main(String [ ] args) {
+        final int LIMIT = 5; // Vector's dimension
+        int [] list = new int [LIMIT];
+
+        for (int i = 0; i < LIMIT; i++) {   // Initialization
+            list[i] = 10 * i;
+        }
+
+        for (int i = 0; i < LIMIT; i++) {   // Writing the vector
+            System.out.print(list[i] + " ");
+        }
+
+    } // End method
+} // End class
+```
+
+<div align="center">
+
+Ejemplo de uso de matrices 1. El espacio en memoria para el _array_ es asignado de forma **estática**<br>(en tiempo de compilación)
+
+</div>
+
+```java
+import java.util.*;
+class MatricesB {
+    public static void main (String [ ] args) {
+        int limit;
+        Scanner scan = new Scanner (System.in);
+        limit = scan.nextInt();  // Read the length
+        int [] list = new int [limit];
+
+        // Initializating and writing within the array
+        for (int i = 0; i < limit; i++) {
+            list[i] = 10*i;
+            System.out.print(list[i] + " ");
+        }
+    } // End method
+} // End class
+```
+
+<div align="center">
+
+Ejemplo de uso de matrices 2. El espacio en memoria para el _array_ es asignado de forma **dinámica**<br>(en tiempo de ejecución, la longitud es pedida por teclado)
+
+</div>
+
+#### ArrayOutOfBoundsException
+
+Un índice no puede **apuntar** a un elemento cuyo índice está **fuera** de los límites de la matriz. En Java se lanza la excepción `ArrayOutOfBoundsException`:
+
+```java
+int [] ejemplo = new int [2];
+System.out.println("Valor: " + ejemplo[2]); // ERROR
+```
+
+#### Matrices multidimensionales
+
+Los arrays multidimensionales son **arrays de arrays**.
+
+```java
+int [][] dosD = new int [4][5]; // Array bidimensional
+```
+
+
+
+```java
+class MatricesMulti {
+    public static void main(String[] args) {
+        int [][] tabla = {{1}, {2, 3}, {4, 5, 6}, {7, 8, 9, 10}};
+        int suma;
+        for (int i = 0; i < tabla.length; i++) { // For rows
+            for (int j = 0; j < tabla[i].length; j++) { // For columns
+                System.out.print (tabla[i][j] + " ") ;
+            }
+            System.out.println();
+        }
+
+        // Adding rows and printing the result
+        for (int i = 0; i < tabla.length; i++) {
+            suma = 0;
+            for (int j = 0; j < tabla[i].length; j++) {
+                suma += tabla[i][j];
+            }
+            System.out.println("Row: " + (i + 1) + "  addition: " + suma);
+        }
+    } // End method
+} // End class
+```
+
+<div align="center">
+
+Ejemplo de uso de matrices 3. Inicialización con una lista y uso de la constante longitud para controlar el acceso a todos los elementos
+</div>
+
+<pre>
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+Row: 1  addition: 1
+Row: 2  addition: 5
+Row: 3  addition: 15
+Row: 4  addition: 34
+</pre>
