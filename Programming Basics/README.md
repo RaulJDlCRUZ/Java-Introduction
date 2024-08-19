@@ -369,7 +369,7 @@ j: 3
 </pre>
 
 <div align="center">
-Ejemplo de ejecución. Diferencia entre secuencias de escape 1
+Ejemplo de ejecución. Diferencia entre secuencias de escape
 </div>
 
 <p>
@@ -392,7 +392,9 @@ nextDouble() // Lee un double
 nextFloat() // Lee un float
 ```
 <div align="center">
-Métodos con el "escáner" de Java
+
+Métodos con el `Scanner` de Java
+
 </div>
 
 <p>
@@ -422,7 +424,9 @@ class IO {
 ```
 
 <div align="center">
-Ejemplo de E/S con Scanner
+
+Ejemplo de E/S con `Scanner`
+
 </div>
 
 <p>
@@ -478,7 +482,9 @@ El `%` se coloca en la posición donde queramos que se escriba el **argumento** 
 ```
 
 <div align="center">
-Ejemplo de impresión con formato, continuación del ejemplo de "escáner"
+
+Ejemplo de impresión con formato, continuación del ejemplo de `Scanner`
+
 </div>
 
 <p>

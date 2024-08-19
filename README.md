@@ -9,6 +9,8 @@ Introducción al lenguaje de programación Java, desde cero a POO. Recursos de a
 
 ## 3. Estructuras básicas de control y datos
 
+[Enlace al Tema 3](./Control%20Structures/README.md)
+
 ## 4. Programación modular
 
 ## 5. Recursividad
