@@ -45,38 +45,21 @@ flowchart TD
 ```
 
 <div align="center">
-Si no usamos la sentencia <code>else</code>, en este diagrama de flujo simplemente no habría bloque en <code>ELSE</code> y saltaríamos a <code>END</code> directamente
+
+Si no usamos la sentencia `else`, en este diagrama de flujo simplemente no habría bloque en _ELSE_ y saltaríamos a _END_ directamente
 </div>
 
-<p>
-</p>
+> Consultar el ejemplo [Condition](/src/Unit3/Condition.java) , que detecta si un número es negativo o no
 
 ```java
-import java.util.*;
-class Condition {
-// Example of conditional instruction if-else
-    public static void main(String[] args) {
-        int x;
-        Scanner leer = new Scanner(System.in);
-
-        // Reading data
-        System.out.println("Insert an integer");
-        x = leer.nextInt();
-        System.out.println("Integer written" + x);
-        // Using the condition
-        if (x < 0) {
-            System.out.println("The number is negative");
-        } // End of "true" (if) branch
-        else {
-            System.out.println("The number is positive");
-        } // End of else
-        System.out.println("End of program");
-    } // End of main method
-} // End of class Condition
+if (max = MAXIMO_ENCONTRADO) { 
+        System.out.println (max+ " es el máximo encontrado"); 
+}
 ```
 
 <div align="center">
-Ejemplo de uso de <code>if-else</code> para detectar si un número es negativo o no
+
+Ejemplo de condición mal formulada: en la condición del `if` debe usarse el operador de comparación y no el de asignación
 </div>
 
 #### Operador ternario
@@ -119,6 +102,40 @@ switch (expresión) {
         // Bloque n
 }
 ```
+
+---
+
+```java
+if (opcion == 'u') 
+  x = x + 1; 
+else
+  if (opcion == 'd') 
+    x = x + 2; 
+  else 
+    if (opcion == 't') 
+      x = x + 3; 
+    else 
+      x = x + 4;
+
+// El equivalente en switch-case es...
+
+switch (opcion) {
+    case 'u':
+        x = x + 1;
+        break;
+    case 'd':
+        x = x + 2;
+        break;
+    case 't':
+        x = x + 3;
+        break;
+    default:
+        x = x + 4;
+        break;
+    }
+```
+
+---
 
 La expresión debe producir un valor de tipo `int`, `char` o `String` y el _literal_ debe ser del **mismo tipo** que el resultado de la expresión.
 

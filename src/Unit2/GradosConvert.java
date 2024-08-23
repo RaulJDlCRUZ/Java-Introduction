@@ -1,7 +1,11 @@
+/* 6. Diseñe e implemente un programa que convierta de grados centígrados a Fahrenheit */
+package Unit2;
+
 import java.util.Scanner;
-public class GradosConvert
-{
-    /* 6. Diseñe e implemente un programa que convierta de grados centígrados a Fahrenheit */
+
+// Otra solución se encuentra en el paquete Session2/Fahrenheit.java
+
+public class GradosConvert {
     public static void main(String args[]) {
         /* Grados ºC a ºF: GRADOS x 9/5 + 32 */
         Scanner sc = new Scanner(System.in);

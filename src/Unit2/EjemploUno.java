@@ -1,5 +1,7 @@
+/* 1. ¿Cuál es el resultado del siguiente programa? */
+package Unit2;
+
 class EjemploUno {
-	/* 1. ¿Cuál es el resultado del siguiente programa? */
 	public static void main(String[] args) {
 		int a = 1, b = 4, c = 2, d = 1;
 		int x = a + b / c + d;

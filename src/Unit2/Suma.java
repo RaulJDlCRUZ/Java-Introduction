@@ -1,5 +1,7 @@
+/* 7. Indique cuál es la salida del siguiente programa */
+package Unit2;
+
 public class Suma {
-    /* 7. Indique cuál es la salida del siguiente programa */
     public static void main(String[] args) {
         int suma = 30;
         System.out.println(suma++ + "  " + ++suma +

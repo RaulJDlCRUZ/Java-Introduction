@@ -1,5 +1,7 @@
+/* 4. Indique cuál es la salida del siguiente programa */
+package Unit2;
+
 class Probador {
-    /* 4. Indique cuál es la salida del siguiente programa */
     public static void main(String[] args) {
         char probador;
         probador = 'c';

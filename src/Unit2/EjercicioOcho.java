@@ -1,5 +1,7 @@
+/* 8. ¿Cuál es el resultado del siguiente programa? */
+package Unit2;
+
 public class EjercicioOcho {
-    /* 8. ¿Cuál es el resultado del siguiente programa? */
     public static void main(String[] args) {
         int a = 1, b = 2, c = 3, d = 1;
         float r, s = (float) 3.5;

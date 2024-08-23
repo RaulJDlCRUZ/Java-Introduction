@@ -1,5 +1,7 @@
+/* 9. ¿Cuál es el resultado del siguiente programa? */
+package Unit2;
+
 public class Var {
-    /* 9. ¿Cuál es el resultado del siguiente programa? */
     public static void main(String[] args) {
         int var = 1;
         boolean r, s, t, v;

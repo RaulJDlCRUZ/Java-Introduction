@@ -1,5 +1,7 @@
+/* 5. Proponga un programa que muestre un overflow con enteros */
+package Unit2;
+
 public class Desbordamiento {
-    /* 5. Proponga un programa que muestre un overflow con enteros */
     public static void main(String args[]) {
         int gran_numero = 2147483647; // Equivale a Integer.MAX_VALUE
         System.out.printf("Número más grande teóricamente: %d\n", gran_numero);

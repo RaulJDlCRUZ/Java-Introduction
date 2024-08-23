@@ -1,0 +1,7 @@
+# Ignorar todos los archivos .class
+*.class
+.vscode
+.vscode/*
+bin
+bin/*
+.classpath

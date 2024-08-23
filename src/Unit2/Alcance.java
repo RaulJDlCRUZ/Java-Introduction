@@ -1,4 +1,5 @@
 /* 3. ¿Cuál es el resultado del siguiente programa? */
+package Unit2;
 
 class Alcance {
 	public static void main(String[] args) {
